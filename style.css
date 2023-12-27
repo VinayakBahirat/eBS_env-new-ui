@@ -91,7 +91,7 @@
   }
   .status-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15ch, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(13ch, 1fr));
   }
   .status-grid .grid-item {
     padding-inline: 1rem;
@@ -129,13 +129,13 @@
     gap: 1rem;
   }  
   .icon-styling {
-    width: 3rem;
-    height: 3rem;
+    width: 2.75rem;
+    height: 2.75rem;
     border: 1px dashed #fff;
     padding: 0.25rem;
     border-radius: 2rem;
-    background-color: #eff6ff;
-    padding: 12px;
+    background-color: #f7f9fb;
+    padding: 10px;
   }
   .height-100 {
     height: calc(100% - 7%);
@@ -145,6 +145,9 @@
   }
   .input-w-min {
     width: 200px;
+  }
+  .input-min-w {
+    width: 175px;
   }
   .border-b {
     border-bottom: 1px solid #d1d5db;
@@ -161,3 +164,78 @@
   .margin-block {
     margin-block:30px;
   }
+  .mandatory::after {
+    content:"*";
+    color:red;
+    font-size: 18px !important;
+    margin-left: 2px;
+  }
+  .card-heading {
+    color: #0a3f5a !important;
+    font-size: 1rem;
+}
+body .margin-block .title-size {
+  font-size: 0.75rem;
+}
+.logo-title {
+  color: #003d5d;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 16px;
+  border-bottom: 1px solid #003d5d;
+}
+.page-name {
+  padding: 0 0 0 10px;
+  border-left: 1px solid #e6e6e6;
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+.top-header {
+  overflow: visible;
+  width: 100%;
+  height: 52px;
+  position: fixed;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 7px 2px rgb(199 195 195 / 40%);
+  -moz-box-shadow: 0px 0px 7px 2px rgb(199 195 195 / 40%);
+  box-shadow: 0px 0px 7px 2px rgb(199 195 195 / 40%);
+  top: 0;
+  left: 0;
+  z-index: 1006;
+}
+a:hover.logo-title {
+  text-decoration: none;
+  color: #003d5d;
+}
+#myChart {
+  width: 100% !important;
+  height: 100% !important;
+  margin-top: -50px;
+}
+
+.chart-wrapper.mdm #myChartImpactAnalyzer {
+  width: 400px !important;
+  height: 400px !important;
+  top: -80px;
+  position: relative;
+  left: 20px;
+}
+.pieChartHeight {
+  min-height: 640px;
+}
+.recentlyView {
+  font-size: 0.80rem;
+  font-weight: 600;
+  color: #212529;
+}
+.viewedBy {
+  font-size: 0.75rem;
+  color: #546e7a;
+}
+.y-overflow {
+  overflow-y: auto;
+  height: 350px;
+}
+/* .card-shadow {
+  box-shadow: 0px 0px 7px 2px rgb(199 195 195 / 40%);
+} */
