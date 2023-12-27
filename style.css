@@ -9,7 +9,7 @@
   }
   
   body {
-    background-color: #f7f7ff;
+    background-color: #f7f7ff !important;
   }
   
   .page-title {
@@ -71,18 +71,24 @@
     color: #546e7a;
   }
   .card-widget .card-amount {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.25;
     font-weight: bold;
   }
-  .card-widget .bg-primary-light {
+  .card-widget .bg-primary-light,
+  .bg-primary-light {
     background-color: #eff6ff;
     border: 0;
+    border-radius:6px;
   }
   .card-widget .bg-primary-light svg {
     color: #1771f8;
   }
-  
+  .card-widget .bg-secondary-light {
+    background-color:#f7f7f7;
+    border-radius:6px;
+    border: 0;
+  }
   .status-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15ch, 1fr));
@@ -93,29 +99,32 @@
   }
   .status-grid .status-grid-title {
     color: #546e7a;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     margin-block: 0 0.125rem;
   }
   .status-grid .status-grid-amount {
-    font-size: 1.25rem;
+    font-size:1rem;
     display: block;
     font-weight: 700;
-    color: #ababab;
+    color:#222;
   }
   
-  .status-grid .grid-item:nth-child(odd) {
+  /* .status-grid .grid-item:nth-child(odd) {
     border-right: 1px dashed #ddd;
-  }
+  } */
   
-  .status-grid .grid-item {
-    border-bottom: 1px dashed #ddd;
-  }
-  .col-lg-8 .status-grid .grid-item {
-    border-right: 1px dashed #ddd;
-  }
-  .col-lg-8 .status-grid .grid-item:last-child {
-    border-right: none;
-  }
+    /* .status-grid .grid-item {
+        border-bottom: 1px dashed #ddd;
+    }
+    .status-grid .grid-item {
+        border-right: 1px dashed #ddd;
+    }
+    .status-grid .grid-item:last-child {
+        border-right: none;
+    } */
+    .status-grid .grid-item {
+        border-radius:6px;
+    }
   .gap-1 {
     gap: 1rem;
   }  
@@ -133,4 +142,22 @@
   }
   .gap {
     gap: 5px;
+  }
+  .input-w-min {
+    width: 200px;
+  }
+  .border-b {
+    border-bottom: 1px solid #d1d5db;
+  }
+  .ruleCount {
+    color:#ed9031;
+  }
+  .card-padding {
+    padding:5px 0;
+  }
+  .border-radius {
+    border-radius:8px !important;
+  }
+  .margin-block {
+    margin-block:30px;
   }
