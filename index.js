@@ -1,3 +1,74 @@
+let SearchType = document.getElementById("SearchType")
+
+let SelectedSearchType = SearchType.value
+
+let DesignName= document.getElementById("DesignName")
+let DesignVersion= document.getElementById("DesignVersion")
+
+
+let MlDesignName= document.getElementById("MlDesignName")
+let MlDesignVersion= document.getElementById("MlDesignVersion")
+
+let MlProductValue= document.getElementsByClassName("ml-product-value")
+let ImpactedValue=document.getElementsByClassName("impacted-value")
+let MdmValue=document.getElementsByClassName("mdm-value")
+
+let MlValue=document.getElementsByClassName('ml-value')
+
+
+
+var ChartValue =[];
+
+let ChartValueTwo=[];
+let ChartValueThree=[];
+
+let MasterlistValue= [];
+
+
+MlDesignName.style.display='none'
+MlDesignVersion.style.display='none'
+
+
+
+
+SearchType.addEventListener('change', function () {
+    let style = this.value == "By Design" ? 'flex' : 'none';
+    DesignName.style.display = style;
+	DesignVersion.style.display=style
+});
+
+SearchType.addEventListener('change', function () {
+
+    let style = this.value == "By Design" ? 'none' : 'flex';
+    MlDesignName.style.display = style;
+	MlDesignVersion.style.display=style
+	 ChartValue = this.value == "By Design" ? [100,1000,500,30] : [200,800,350,20]
+	 ChartValueTwo = this.value == "By Design" ? [10,22,30,11,11] : [20,34,64,23,21]
+	 ChartValueThree = this.value == "By Design" ? [300,220,800,120] : [100,344,500,233]
+	 MasterlistValue = this.value == "By Design" ?[10,10] : [10,2]
+
+	
+
+	  for (let i = 0; i < ChartValue.length; i++) {
+        MlProductValue[i].textContent = ChartValue[i];
+    }
+
+	 for (let i = 0; i < ChartValueTwo.length; i++) {
+        ImpactedValue[i].textContent = ChartValueTwo[i];
+    }
+	 for (let i = 0; i < ChartValueThree.length; i++) {
+        MdmValue[i].textContent = ChartValueThree[i];
+    }
+
+	for (let i = 0; i < MasterlistValue.length; i++) {
+        MlValue[i].textContent = MasterlistValue[i];
+    }
+
+});
+
+
+// Chart 1
+
 let ctx2 = document.getElementById("myChart").getContext('2d');
 var myChart = new Chart(ctx2, {
 	type: 'doughnut',
@@ -10,7 +81,7 @@ var myChart = new Chart(ctx2, {
 				"#4ade80",
 				"#ef4444"
 			],
-			data: [100, 1000, 500, 20]
+			data: [23,34,24,13]
 		}]
 	},
 	options: {

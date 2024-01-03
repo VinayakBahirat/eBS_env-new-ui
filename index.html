@@ -64,24 +64,19 @@
 							<div class="form-group flex-column align-items-start input-w-min">
 								<label class="form-label mandatory pt-1" for="SearchType" required>Search Type</label>
 								<select class="custom-select" id="SearchType">
-									<option selected>By Design</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
+									<option value="By Design" >By Design</option>
+									<option value="By Masterlist">By Masterlist</option>
 								</select>
 							</div>
 
-							<div class="form-group flex-column align-items-start input-w-min">
+							<div id="DesignName" class="form-group flex-column align-items-start input-w-min">
 								<label class="form-label mandatory pt-1" for="Design" required>Design Name</label>
 								<select class="custom-select" id="Design">
 									<option selected>Business</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
 								</select>
 							</div>
 
-							<div class="form-group flex-column align-items-start input-w-min">
+							<div id="DesignVersion" class="form-group flex-column align-items-start input-w-min">
 								<label class="form-label mb-2 pt-2" for="DesignVersion">Design Version</label>
 								<select class="custom-select" id="DesignVersion">
 									<option selected>1.0</option>
@@ -95,9 +90,8 @@
 								<label class="form-label mandatory" for="masterlistType" required>MasterList Type</label>
 								<select class="custom-select" id="masterlists">
 									<option selected>Business</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
+									<option value="1">Collateral</option>
+								
 								</select>
 							</div>
 
@@ -113,7 +107,7 @@
 												<div class="card-body d-flex align-items-center justify-content-between gap">
 													<div>
 														<h5 class="card-subtitle">Total Associated ML </h5>
-														<h6 class="card-amount">10</h6>
+														<h6 class="card-amount ml-value">10</h6>
 													</div>
 													<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
 														stroke="currentColor" class="card-icon">
@@ -128,7 +122,7 @@
 												<div class="card-body d-flex align-items-center justify-content-between gap">
 													<div>
 														<h5 class="card-subtitle">Ready To Sync ML</h5>
-														<h6 class="card-amount">10</h6>
+														<h6 class="card-amount ml-value">10</h6>
 													</div>
 													<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
 														stroke="currentColor" class="card-icon">
@@ -149,29 +143,42 @@
 										<label class="form-label mandatory pt-1" for="MasterListSync" required>Master List Sync</label>
 										<select class="custom-select" id="MasterListSync">
 											<option selected>Ready to Sync</option>
-											<option value="1">One</option>
-											<option value="2">Two</option>
-											<option value="3">Three</option>
+											<option value="1">Total Assoc</option>
+										
 										</select>
 									</div>
 
 									<div class="form-group flex-column align-items-start input-min-w">
 										<label class="form-label pt-2 mt-1" for="SelectML">Select ML</label>
 										<select class="custom-select" id="SelectML">
-											<option selected>Limit</option>
-											<option value="1">One</option>
-											<option value="2">Two</option>
-											<option value="3">Three</option>
+											<option value="Limit" selected>Limit</option>
+											<option value="Services">Services</option>
+											
 										</select>
 									</div>
 
 									<div class="form-group flex-column align-items-start input-min-w">
 										<label class="form-label pt-2 mt-1" for="SelectMLVersion">Select ML Version</label>
 										<select class="custom-select" id="SelectMLVersion">
-											<option selected>2.01</option>
-											<option value="1">2</option>
-											<option value="2">3</option>
-											<option value="3">4</option>
+											<option selected>_2.01</option>
+											<option value="1">_2.0</option>
+										</select>
+									</div>
+									<div id="MlDesignName" class="form-group flex-column align-items-start input-min">
+										<label class="form-label pt-2 mt-1" for="SelectMLVersion">Design Name</label>
+										<select class="custom-select" id="SelectMLVersion">
+											<option selected>Select</option>
+											<option value="1">Bussiness</option>
+											
+										</select>
+									</div>
+
+									<div id="MlDesignVersion" class="form-group flex-column align-items-start input-min-w ">
+										<label class="form-label pt-2 mt-1" for="SelectMLVersion">Design Version</label>
+										<select class="custom-select" id="SelectMLVersion">
+											<option selected>Select</option>
+											<option value="1">1</option>
+											
 										</select>
 									</div>
 								</form>
@@ -481,25 +488,25 @@
 								<div class="grid-item bg-primary-light">
 									<div class="bg-transparent">
 										<h6 class="text-uppercase status-grid-title card-subtitle">QUEUED</h6>
-										<span class="status-grid-amount">100</span>
+										<span class="status-grid-amount ml-product-value">100</span>
 									</div>
 								</div>
 								<div class="grid-item bg-primary-light">
 									<div class="bg-transparent">
 										<h6 class="text-uppercase status-grid-title card-subtitle">In-Progress</h6>
-										<span class="status-grid-amount">1000</span>
+										<span class="status-grid-amount ml-product-value">1000</span>
 									</div>
 								</div>
 								<div class="grid-item bg-primary-light">
 									<div class="bg-transparent">
 										<h6 class="text-uppercase status-grid-title card-subtitle">Complete</h6>
-										<span class="status-grid-amount">500</span>
+										<span class="status-grid-amount ml-product-value">500</span>
 									</div>
 								</div>
 								<div class="grid-item bg-primary-light">
 									<div class="bg-transparent">
 										<h6 class="text-uppercase status-grid-title card-subtitle">Error</h6>
-										<span class="status-grid-amount">30</span>
+										<span class="status-grid-amount ml-product-value">30</span>
 									</div>
 								</div>
 								<div class="grid-item p-4 m-1">
@@ -525,31 +532,31 @@
 								<div class="grid-item bg-primary-light">
 									<div class="bg-transparent">
 										<h6 class="text-uppercase status-grid-title card-subtitle">Foundation Template</h6>
-										<span class="status-grid-amount card-amount">10</span>
+										<span class="status-grid-amount card-amount impacted-value">10</span>
 									</div>
 								</div>
 								<div class="grid-item bg-primary-light">
 									<div class="bg-transparent">
 										<h6 class="text-uppercase status-grid-title card-subtitle">Product</h6>
-										<span class="status-grid-amount card-amount">22</span>
+										<span class="status-grid-amount card-amount impacted-value">22</span>
 									</div>
 								</div>
 								<div class="grid-item bg-primary-light">
 									<div class="bg-transparent">
 										<h6 class="text-uppercase status-grid-title card-subtitle">Package</h6>
-										<span class="status-grid-amount card-amount">30</span>
+										<span class="status-grid-amount card-amount impacted-value">30</span>
 									</div>
 								</div>
 								<div class="grid-item bg-primary-light">
 									<div class="bg-transparent">
 										<h6 class="text-uppercase status-grid-title card-subtitle">Account</h6>
-										<span class="status-grid-amount card-amount">11</span>
+										<span class="status-grid-amount card-amount impacted-value">11</span>
 									</div>
 								</div>
 								<div class="grid-item bg-primary-light">
 									<div class="bg-transparent">
 										<h6 class="text-uppercase status-grid-title card-subtitle">Quote</h6>
-										<span class="status-grid-amount card-amount">11</span>
+										<span class="status-grid-amount card-amount impacted-value">11</span>
 									</div>
 								</div>
 							</div>
@@ -569,25 +576,25 @@
 								<div class="grid-item bg-primary-light">
 									<div class="bg-transparent">
 										<h6 class="text-uppercase status-grid-title card-subtitle">QUEUED</h6>
-										<span class="status-grid-amount">300</span>
+										<span class="status-grid-amount mdm-value">300</span>
 									</div>
 								</div>
 								<div class="grid-item bg-primary-light">
 									<div class="bg-transparent">
 										<h6 class="text-uppercase status-grid-title card-subtitle">In-Progress</h6>
-										<span class="status-grid-amount">220</span>
+										<span class="status-grid-amount mdm-value">220</span>
 									</div>
 								</div>
 								<div class="grid-item bg-primary-light">
 									<div class="bg-transparent">
 										<h6 class="text-uppercase status-grid-title card-subtitle">Complete</h6>
-										<span class="status-grid-amount">800</span>
+										<span class="status-grid-amount mdm-value">800</span>
 									</div>
 								</div>
 								<div class="grid-item bg-primary-light">
 									<div class="bg-transparent">
 										<h6 class="text-uppercase status-grid-title card-subtitle">Error</h6>
-										<span class="status-grid-amount">120</span>
+										<span class="status-grid-amount mdm-value">120</span>
 									</div>
 								</div>
 								<div class="grid-item p-4 m-1">
